@@ -1,0 +1,67 @@
+<section>
+  <h1>Hey, I'm Ignacio</h1>
+  <p>
+    I'm a System Engineer and Web Developer from Argentina with 3 years of
+    experience building dynamic and user-friendly web applications.
+  </p>
+
+  <div>
+    <a href="https://github.com/ignaciocaramuto" target="_blank">
+      <img src="/src/icons/github-mark-white.svg" alt="GitHub logo" />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/ignacio-caramuto-533013207"
+      target="_blank"
+    >
+      <img
+        src="/src/icons/linkedin-logo.svg"
+        alt="LinkedIn logo"
+        class="filter"
+      />
+    </a>
+    <a href="mailto:ignaciocaramuto@gmail.com">
+      <img src="/src/icons/email-logo.svg" alt="Email logo" class="filter" />
+    </a>
+  </div>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 55px);
+    justify-content: center;
+    animation: fade-in linear forwards 1s;
+  }
+
+  p {
+    max-width: 700px;
+    text-align: center;
+  }
+
+  div {
+    display: flex;
+    gap: 1em;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .filter {
+    filter: invert(100%) brightness(100%) contrast(100%);
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      filter: blur(3px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+</style>

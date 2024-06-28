@@ -1,0 +1,73 @@
+---
+import Header from "../components/Header.astro";
+import Me from "../components/Me.astro";
+import Experience from "../components/Experience.astro";
+---
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll(".hidden");
+  hiddenElements.forEach((el) => observer.observe(el));
+</script>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Ignacio Caramuto</title>
+  </head>
+  <body>
+    <Header />
+    <Me />
+    <Experience />
+  </body>
+</html>
+
+<style is:global>
+  html {
+    font-family: system-ui, sans-serif;
+    background: #13151a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  section {
+    height: 100vh;
+  }
+
+  .hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+    transform: translateY(100px);
+  }
+
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+</style>
