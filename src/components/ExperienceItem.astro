@@ -1,0 +1,35 @@
+---
+const { date, title, tasks } = Astro.props;
+---
+
+<li>
+  <div></div>
+  <time>{date}</time>
+  <h3>{title}</h3>
+  {tasks.map((task: string) => <p>- {task}</p>)}
+</li>
+
+<style>
+  div {
+    position: absolute;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #e5e7eb;
+    border-radius: 100%;
+    margin-top: 0.2rem;
+    left: -0.45rem;
+    border: 1px solid white;
+  }
+
+  li {
+    margin-bottom: 3em;
+  }
+
+  time {
+    color: #737b8a;
+  }
+
+  p {
+    color: #8f99ab;
+  }
+</style>
