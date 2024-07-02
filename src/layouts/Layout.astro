@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Me from "../components/Me.astro";
 import Experience from "../components/Experience.astro";
+import "../styles/global.scss";
 ---
 
 <script>
@@ -26,7 +27,7 @@ import Experience from "../components/Experience.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Ignacio Caramuto</title>
+    <title>Portfolio of Ignacio Caramuto, Web Developer</title>
   </head>
   <body>
     <Header />
@@ -34,45 +35,3 @@ import Experience from "../components/Experience.astro";
     <Experience />
   </body>
 </html>
-
-<style is:global>
-  html {
-    font-family: system-ui, sans-serif;
-    background: #13151a;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-  }
-
-  body {
-    margin: 0;
-    padding: 0;
-  }
-
-  section {
-    height: 100vh;
-  }
-
-  .hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transition: all 1s;
-    transform: translateY(100px);
-  }
-
-  .icon {
-    width: 30px;
-    height: 30px;
-  }
-
-  .show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0);
-  }
-
-  h1 {
-    font-size: 50px;
-  }
-</style>
