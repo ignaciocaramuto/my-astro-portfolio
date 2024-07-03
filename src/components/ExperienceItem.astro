@@ -9,16 +9,17 @@ const { date, title, tasks } = Astro.props;
   {tasks.map((task: string) => <p>- {task}</p>)}
 </li>
 
-<style>
+<style lang="scss">
+  @import "../styles/colors.scss";
   div {
     position: absolute;
     width: 0.75rem;
     height: 0.75rem;
-    background-color: #e5e7eb;
+    background-color: $primary-color;
     border-radius: 100%;
     margin-top: 0.2rem;
     left: -0.45rem;
-    border: 1px solid white;
+    border: 1px solid $primary-color;
   }
 
   li {
@@ -26,10 +27,10 @@ const { date, title, tasks } = Astro.props;
   }
 
   time {
-    color: #737b8a;
+    color: $text-grey-400;
   }
 
   p {
-    color: #8f99ab;
+    color: $text-grey-500;
   }
 </style>
