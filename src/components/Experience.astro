@@ -4,7 +4,7 @@ import ExperienceItem from "./ExperienceItem.astro";
 const Experiencies = [
   {
     date: "February 2023 - February 2024",
-    title: "FullStack Developer with Angular & .NET",
+    title: "FullStack Developer with Angular & .NET - Cargo Produce",
     tasks: [
       "Development and maintenance of new features for a global container tracking and location web application.",
       "Integration with external API to automatically calculate the carbon footprint emissions of container routes upon arrival at their destination.",
@@ -14,7 +14,7 @@ const Experiencies = [
   },
   {
     date: "March 2021 - February 2023",
-    title: "FullStack Developer with Angular & .NET",
+    title: "FullStack Developer with Angular & .NET - Ingenea SRL",
     tasks: [
       "Development a dashboard web application for project visualization.",
       "Development of a web application for listing and managing project contracts",
@@ -25,6 +25,7 @@ const Experiencies = [
 ---
 
 <section class="hidden">
+  <h2 class="text-secondary-color">Work experience</h2>
   <ol>
     {Experiencies.map((experience) => <ExperienceItem {...experience} />)}
   </ol>
@@ -35,5 +36,6 @@ const Experiencies = [
     list-style-type: none;
     position: relative;
     border-left: 1px solid #e5e7eb;
+    padding-inline-start: 20px;
   }
 </style>
