@@ -7,7 +7,8 @@
   </nav>
 </header>
 
-<style>
+<style lang="scss">
+  @import "../styles/colors.scss";
   header {
     height: 55px;
   }
@@ -18,5 +19,16 @@
     padding: 1em;
     gap: 3em;
     flex-wrap: wrap;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.5s;
+  }
+
+  a:hover {
+    color: $secondary-color;
+    transform: scale(1.1);
   }
 </style>
