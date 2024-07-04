@@ -1,14 +1,11 @@
 ---
 import Badge from "./Badge.astro";
 
-const { title, link, description, technologies } = Astro.props;
+const { title, link, img, alt, description, technologies } = Astro.props;
 ---
 
 <a href={link} target="_blank">
-  <img
-    src="../../public/projects/armatubanda.webp"
-    alt="Screenshot of Armatubanda"
-  />
+  <img src={img} alt={alt} />
   <div class="card-text">
     <h3>{title}</h3>
     <p>
