@@ -1,3 +1,7 @@
+---
+import Badge from "./Badge.astro";
+---
+
 <section class="hidden">
   <h2 class="text-secondary-color">Projects</h2>
   <a
@@ -16,10 +20,10 @@
         musicians using specific filters, helping both amateurs and
         professionals to network and collaborate
       </p>
-      <div class="text-secondary-color">
-        <span>Angular</span>
-        <span>Express</span>
-        <span>SQL</span>
+      <div class="text-secondary-color technologies">
+        <Badge>Angular</Badge>
+        <Badge>Express</Badge>
+        <Badge>MySQL</Badge>
       </div>
     </div>
   </a>
@@ -88,7 +92,9 @@
     max-width: 600px;
   }
 
-  span {
-    font-weight: 200;
+  .technologies {
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
   }
 </style>
