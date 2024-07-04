@@ -1,27 +1,21 @@
 ---
 import Badge from "./Badge.astro";
+
+const { title, link, description, technologies } = Astro.props;
 ---
 
-<a
-  href="https://66855c9b756ef11df921a077--elegant-froyo-6f1cca.netlify.app/"
-  target="_blank"
->
+<a href={link} target="_blank">
   <img
     src="../../public/projects/armatubanda.webp"
     alt="Screenshot of Armatubanda"
   />
   <div class="card-text">
-    <h3>Armá tu banda - Search for bands and musicians</h3>
+    <h3>{title}</h3>
     <p>
-      "Armá tu banda" is a platform that connects musicians and bands. It allows
-      users to create public profiles, form bands, and search for musicians
-      using specific filters, helping both amateurs and professionals to network
-      and collaborate
+      {description}
     </p>
     <div class="text-secondary-color technologies">
-      <Badge>Angular</Badge>
-      <Badge>Express</Badge>
-      <Badge>MySQL</Badge>
+      {technologies.map((technology: string) => <Badge>{technology}</Badge>)}
     </div>
   </div>
 </a>
