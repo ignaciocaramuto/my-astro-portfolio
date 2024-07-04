@@ -85,4 +85,11 @@ const { title, link, img, alt, description, technologies } = Astro.props;
     gap: 0.5em;
     flex-wrap: wrap;
   }
+
+  @media screen and (max-width: 874px) {
+    .card-text::before,
+    img {
+      display: none;
+    }
+  }
 </style>
