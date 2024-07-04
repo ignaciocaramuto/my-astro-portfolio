@@ -1,0 +1,97 @@
+---
+import Badge from "./Badge.astro";
+---
+
+<a
+  href="https://66855c9b756ef11df921a077--elegant-froyo-6f1cca.netlify.app/"
+  target="_blank"
+>
+  <img
+    src="../../public/projects/armatubanda.webp"
+    alt="Screenshot of Armatubanda"
+  />
+  <div class="card-text">
+    <h3>Armá tu banda - Search for bands and musicians</h3>
+    <p>
+      "Armá tu banda" is a platform that connects musicians and bands. It allows
+      users to create public profiles, form bands, and search for musicians
+      using specific filters, helping both amateurs and professionals to network
+      and collaborate
+    </p>
+    <div class="text-secondary-color technologies">
+      <Badge>Angular</Badge>
+      <Badge>Express</Badge>
+      <Badge>MySQL</Badge>
+    </div>
+  </div>
+</a>
+
+<style lang="scss">
+  @import "../styles/colors.scss";
+
+  a {
+    display: flex;
+    align-content: center;
+    position: relative;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background-color: $project-card-background;
+    border: 2px solid $project-card-background;
+    font-size: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 34px 32px -33px rgba(0, 0, 0, 0.18);
+    transition:
+      box-shadow 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  a:hover {
+    box-shadow: 0 4px 21px -12px rgba(228, 228, 228, 0.66);
+    transform: translate(0px, -3px);
+  }
+
+  a:hover > img {
+    transform: scale(1.1) rotate(1deg);
+  }
+
+  .card-text {
+    z-index: 2;
+    padding: 0.6em;
+  }
+
+  .card-text::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: $project-card-background;
+    top: -22px;
+    height: 240px;
+    left: 310px;
+    width: 60px;
+    transform: rotate(8deg);
+    z-index: -1;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+    max-width: 340px;
+    transition: transform 0.2s ease;
+  }
+
+  p {
+    color: $text-grey-500;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .technologies {
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+  }
+</style>
